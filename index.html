@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intramurals Eligibility Checker</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+</head>
+<body>
+
+<h2>Intramurals Eligibility Checker</h2>
+
+<div>
+    <label>Have you completed online registration?</label><br>
+    <input type="radio" name="reg" id="reg_yes" checked> Yes
+    <input type="radio" name="reg" id="reg_no"> No
+</div>
+<br>
+
+<div>
+    <label>Do you have your medical clearance?</label><br>
+    <input type="radio" name="med" id="med_yes" checked> Yes
+    <input type="radio" name="med" id="med_no"> No
+</div>
+<br>
+
+<div>
+    <label>Grade:</label>
+    <select id="grade">
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <label>Section:</label>
+    <select id="section">
+        <option value="Ruby">Ruby</option>
+        <option value="Emerald">Emerald</option>
+        <option value="Sapphire">Sapphire</option>
+        <option value="Topaz">Topaz</option>
+    </select>
+</div>
+<br>
+
+<button py-click="check_intramurals">Check Eligibility</button>
+
+<div id="output"></div>
+
+<script type="py" src="main.py"></script>
+
+</body>
+</html>
+
