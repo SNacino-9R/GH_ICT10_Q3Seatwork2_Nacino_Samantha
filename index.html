@@ -9,47 +9,101 @@
 </head>
 <body>
 
-<h2>Intramurals Eligibility Checker</h2>
 
-<div>
-    <label>Have you completed online registration?</label><br>
-    <input type="radio" name="reg" id="reg_yes" checked> Yes
-    <input type="radio" name="reg" id="reg_no"> No
-</div>
-<br>
+    <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <img src="oblogo.png" alt="Logo" class="rounded-pill" style="width: 4%;"><a class="navbar-brand me-auto" href="homepage.html">OBGH Intrams 25-26</a>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Logo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link mx-lg-2" href="homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#main">Team Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#second">List of Players</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-<div>
-    <label>Do you have your medical clearance?</label><br>
-    <input type="radio" name="med" id="med_yes" checked> Yes
-    <input type="radio" name="med" id="med_no"> No
-</div>
-<br>
+        <a href="" class="refresh-button">Refresh</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<div>
-    <label>Grade:</label>
-    <select id="grade">
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-    </select>
+    </div>
+    </nav>
 
-    <label>Section:</label>
-    <select id="section">
-        <option value="Ruby">Ruby</option>
-        <option value="Emerald">Emerald</option>
-        <option value="Sapphire">Sapphire</option>
-        <option value="Topaz">Topaz</option>
-    </select>
-</div>
-<br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="container shadow rounded p-4 mb-4 mt-5" id="main">
 
-<button py-click="check_intramurals">Check Eligibility</button>
+        <h2 style="text-align: center;">Team Checker</h2>
+        <form>
+            <p>Have you registered online?
+                <br>
+                <input type="radio" name="online" value="yes"><label>Yes</label>
+                <input type="radio" name="online" value="no"><label>No</label>
+            </p>
+        </form>
 
+        <form>    
+            <p>Did you get medical clearance from the clinic?
+                <br>
+                <input type="radio" name="med" value="yes"><label>Yes</label>
+                <input type="radio" name="med" value="no"><label>No</label>
+            </p>
+
+            <br>
+
+            <p>Please enter your grade level and section:</p>
+            <label for="grade">Grade Level:</label>
+            <select name="grade" id="gr" class="form-control">
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <br>
+
+            <label for="section">Section:</label>
+            <select name="section" id="sec" class="form-control">
+                <option value="eme">Emerald</option>
+                <option value="ruby">Ruby</option>
+                <option value="saph">Sapphire</option>
+                <option value="tpz">Topaz</option>
+            </select>
+
+            <br>
+
+            <input type="button" class="btn btn-outline-dark" py-click="intrams" value="Submit">
+
+        </form>
+
+        <div id="output" style="text-align: center; font-size: 25px;"></div>
+        <div id="image" style="text-align: center;"></div>
+    </div>
+
+
+    <
 <div id="output"></div>
 
 <script type="py" src="main.py"></script>
 
 </body>
 </html>
+
 
